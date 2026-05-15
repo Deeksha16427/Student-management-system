@@ -1,0 +1,296 @@
+body {
+    margin: 0;
+    background: #f4f8ff;
+    font-family: Arial;
+}
+
+/* NAVBAR */
+
+.navbar {
+    height: 80px;
+    background: #164b7d;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.menu-btn {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.title {
+    margin-left: auto;
+    font-size: 24px;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: #1C335A;
+    position: fixed;
+    left: -260px;
+    top: 0;
+    transition: 0.3s;
+    color: white;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.logo-box img {
+    width: 60px;
+    height: 60px;
+}
+
+.logo-text h6 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.logo-text p {
+    margin: 0;
+    color: #cbd5e1;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background: #2563eb;
+}
+
+.menu-title {
+    margin: 15px 20px 5px;
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.active-link {
+    background: #2563eb;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.sidebar .logout {
+    position: static !important;
+    bottom: unset !important;
+    left: unset !important;
+    width: 100%;
+    display: block;
+    padding: 12px 20px;
+    margin-top: 8px;
+    color: #f87171;
+    text-decoration: none;
+}
+
+.sidebar hr {
+    margin: 10px 0;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* CONTENT */
+
+#content {
+    padding: 40px;
+    transition: 0.3s;
+}
+
+#content.active {
+    margin-left: 260px;
+}
+
+/* PAGE TITLE */
+
+.page-title {
+    text-align: center;
+    color: #164b7d;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* CARD */
+
+.details-card {
+    width: 70%;
+    margin: auto;
+    background: white;
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* PHOTO */
+
+.teacher-photo {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.teacher-photo img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #164b7d;
+}
+
+/* DETAILS */
+
+.detail-box {
+    margin-bottom: 20px;
+}
+
+.detail-label {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 5px;
+}
+
+.detail-value {
+    background: #f4f8ff;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+/* BUTTON */
+
+.back-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 22px;
+    background: #164b7d;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.back-btn:hover {
+    background: #2563eb;
+    color: white;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+
+    #content {
+        padding: 25px 15px;
+    }
+    #content.active {
+        margin-left: 0 !important;
+    }
+
+    .sidebar {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        height: 100vh;
+        width: 260px;
+        z-index: 9999;
+        transition: 0.3s;
+    }
+    .sidebar.active {
+        left: 0;
+    }
+
+    .details-card {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .page-title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #content {
+        padding: 18px 12px;
+    }
+    #content.active {
+        margin-left: 0 !important;
+    }
+
+    .details-card {
+        width: 100%;
+        padding: 20px;
+        border-radius: 14px;
+    }
+
+    .page-title {
+        font-size: 24px;
+    }
+
+    .teacher-photo img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .detail-value {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .back-btn {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #content {
+        padding: 15px 10px;
+    }
+
+    .details-card {
+        width: 100%;
+        padding: 15px;
+        border-radius: 12px;
+    }
+
+    .page-title {
+        font-size: 20px;
+    }
+
+    .teacher-photo img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .detail-label {
+        font-size: 12px;
+    }
+
+    .detail-value {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .back-btn {
+        width: 100%;
+        padding: 10px;
+    }
+}
