@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+$loginMessage = "";
+if(isset($_SESSION['loginMessage'])){
+    $loginMessage = $_SESSION['loginMessage'];
+    unset($_SESSION['loginMessage']);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,15 +40,11 @@
 
     <h3 class="login-title">Login</h3>
     <h4>
-        <?php 
-        session_start();
-
-        if(isset($_SESSION['loginMessage']))
-        {
-        echo "<div style='background:#fee2e2; color:#b91c1c; padding:8px; border-radius:6px; font-size:14px; text-align:center; margin-bottom:10px;'>".$_SESSION['loginMessage']."</div>";
-        unset($_SESSION['loginMessage']);
-        }
-        ?>
+       <?php if(!empty($loginMessage)) { ?>
+    <div style="background:#fee2e2; color:#b91c1c; padding:8px; border-radius:6px; font-size:14px; text-align:center; margin-bottom:10px;">
+        <?php echo $loginMessage; ?>
+    </div>
+<?php } ?>
     </h4>
 
     <form action="login_check.php" method="post">
