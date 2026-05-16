@@ -6,7 +6,7 @@ if(!isset($_SESSION['email']))
     header("location:login.php");
     exit();
 }
-elseif($_SESSION['usertype']=='student')
+elseif(isset($_SESSION['usertype']) && $_SESSION['usertype']=='student')
 {
     header("location:login.php");
     exit();

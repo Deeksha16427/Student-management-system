@@ -7,7 +7,7 @@ COPY . /var/www/html/
 RUN a2enmod rewrite
 
 # Install MySQL extension (if your app uses MySQL)
-RUN docker-php-ext-install pdo_mysql mysqli
+RUN docker-php-ext-install mysqli pdo pdo_mysql
 
 # Set proper permissions
 RUN chown -R www-data:www-data /var/www/html

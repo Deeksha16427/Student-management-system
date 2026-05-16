@@ -51,6 +51,7 @@ if(isset($_POST['update_teacher']))
     mysqli_query($conn,$update);
 
     header("location:edit_teacher.php?id=$id&msg=updated");
+    exit();
 }
 
 ?>

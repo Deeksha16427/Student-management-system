@@ -59,6 +59,7 @@ if(isset($_POST['update'])){
     mysqli_query($conn,$update);
 
     header("location:view_student.php?msg=updated");
+    exit();
 }
 ?>
 

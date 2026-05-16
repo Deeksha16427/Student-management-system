@@ -3,7 +3,7 @@
 include('config.php');
 
 // GET ID FROM URL
-$id = isset($_GET['id']) ? $_GET['id'] : 0;
+$id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 
 // FETCH OLD DATA
 
@@ -40,6 +40,7 @@ if(isset($_POST['update_course']))
     if($update_result)
     {
         header("location:view_courses.php");
+        exit();
     }
 }
 

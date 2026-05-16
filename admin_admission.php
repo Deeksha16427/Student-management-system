@@ -6,7 +6,7 @@ if(!isset($_SESSION['email']))
     header("location:login.php");
     exit();
 }
-elseif($_SESSION['usertype']=='student')
+elseif(isset($_SESSION['usertype']) && $_SESSION['usertype']=='student')
 {
     header("location:login.php");
     exit();
@@ -81,7 +81,7 @@ include('config.php');
                 <input type="date" name="dob" class="form-control mb-3" required>
             </div>
             <div class="col-md-6">
-                <select class="form-control mb-3" name="gender">
+                <select class="form-control mb-3" name="gender" required>
                     <option>Gender</option>
                     <option>Male</option>
                     <option>Female</option>
@@ -107,10 +107,10 @@ include('config.php');
         <h5 class="section-title">Contact Details</h5>
         <div class="row">
             <div class="col-md-6">
-                <input type="email" name="email" class="form-control mb-3" placeholder="Email">
+                <input type="email" name="email" class="form-control mb-3" placeholder="Email" required>
             </div>
             <div class="col-md-6">
-                <input type="text" name="phone" class="form-control mb-3" placeholder="Phone Number">
+                <input type="text" name="phone" class="form-control mb-3" placeholder="Phone Number" required>
             </div>
             <div class="col-12">
                 <textarea class="form-control mb-3" name="address" placeholder="Full Address"></textarea>
@@ -127,7 +127,7 @@ include('config.php');
                 <input type="text" name="percentage" class="form-control mb-3" placeholder="Percentage / CGPA">
             </div>
             <div class="col-md-6">
-                <select class="form-control mb-3" name="course">
+                <select class="form-control mb-3" name="course" required>
                     <option>Select Course</option>
                     <option>BCA</option>
                     <option>BBA</option>
@@ -138,7 +138,7 @@ include('config.php');
                 </select>
             </div>
             <div class="col-md-6">
-                <select class="form-control mb-3" name="year">
+                <select class="form-control mb-3" name="year" required>
                     <option>Year</option>
                     <option>1st Year</option>
                     <option>2nd Year</option>
@@ -150,7 +150,7 @@ include('config.php');
 
         <!-- DOCUMENT UPLOAD -->
         <h5 class="section-title">Documents</h5>
-        <input type="file" name="photo" class="form-control mb-3">
+        <input type="file" name="photo" class="form-control mb-3" accept="image/*">
 
         <!-- SUBMIT -->
         <button type="submit" class="submit-btn btn-center">Submit</button>

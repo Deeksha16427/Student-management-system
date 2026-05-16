@@ -29,6 +29,7 @@ if(isset($_POST['add_teacher']))
     mysqli_query($conn,$query);
 
     header("location:add_teacher.php?msg=added");
+    exit();
 }
 ?>
 

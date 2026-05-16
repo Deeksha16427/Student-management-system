@@ -6,7 +6,7 @@ if(!isset($_SESSION['email']))
     header("location:login.php");
     exit();
 }
-elseif($_SESSION['usertype']=='student')
+elseif(isset($_SESSION['usertype']) && $_SESSION['usertype']=='student')
 {
     header("location:login.php");
     exit();
@@ -72,7 +72,8 @@ include('config.php');
         <input type="hidden" name="added_by" value="admin">
         <input type="text" name="name" placeholder="Full Name" required>
         <input type="email" name="email" placeholder="Email Address" required>
-        <input type="text" name="phone" placeholder="Phone Number" required>
+        <input type="text" name="phone" placeholder="Phone Number" pattern="[0-9]{10}" 
+maxlength="10" required>
         <input type="password" name="password" placeholder="Password" required>
 
         <button type="submit">Register</button>
