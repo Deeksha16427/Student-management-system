@@ -1,10 +1,6 @@
 <?php
 // DB connection
-$conn = mysqli_connect("localhost", "root", "", "CollegeProject",3307);
-
-if(!$conn){
-    die("Database Connection Failed");
-}
+include('config.php');
 
 // Form data receive
 $username = $_POST['name'];

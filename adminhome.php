@@ -12,12 +12,7 @@ elseif($_SESSION['usertype']=='student')
     exit();
 }
 // DATABASE CONNECTION
-$host="localhost";
-$user="root";
-$password="";
-$db="collegeproject";
-
-$conn = mysqli_connect($host,$user,$password,$db,3307);
+include('config.php');
 
 // TOTAL STUDENTS COUNT
 $sql = "SELECT COUNT(*) as total FROM admission";

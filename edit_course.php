@@ -1,11 +1,6 @@
 <?php
 
-$host="localhost";
-$user="root";
-$password="";
-$db="collegeproject";
-
-$conn=mysqli_connect($host,$user,$password,$db,3307);
+include('config.php');
 
 // GET ID FROM URL
 $id = isset($_GET['id']) ? $_GET['id'] : 0;

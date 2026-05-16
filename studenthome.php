@@ -1,7 +1,6 @@
 <?php
 session_start();
-error_reporting(0);
-$conn = mysqli_connect("localhost","root","","collegeproject",3307);
+include('config.php');
 
 if(!isset($_SESSION['email']))
 {

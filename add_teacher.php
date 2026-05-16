@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost","root","","collegeproject",3307);
+include('config.php');
 
 if(isset($_POST['add_teacher']))
 {

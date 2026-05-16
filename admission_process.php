@@ -1,10 +1,6 @@
 <?php
 
-$conn = mysqli_connect("localhost","root","","collegeproject",3307);
-
-if(!$conn){
-    die("Connection Failed");
-}
+include('config.php');
 
 // form data lena
 $name = $_POST['name'];

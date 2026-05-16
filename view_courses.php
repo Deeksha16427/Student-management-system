@@ -1,11 +1,6 @@
 <?php
 
-$host="localhost";
-$user="root";
-$password="";
-$db="collegeproject";
-
-$conn=mysqli_connect($host,$user,$password,$db,3307);
+include('config.php');
 
 $sql="SELECT * FROM course";
 

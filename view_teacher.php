@@ -1,6 +1,5 @@
 <?php
-
-$conn = mysqli_connect("localhost","root","","collegeproject",3307);
+include('config.php');
 
 /* FETCH TEACHERS */
 
@@ -81,7 +80,7 @@ $result = mysqli_query($conn,$query);
         <i class="fa fa-book"></i> Add Course
     </a>
 
-    <a href="view_course.php">
+    <a href="view_courses.php">
         <i class="fa fa-book"></i> View Courses
     </a>
 

@@ -1,9 +1,14 @@
 <?php
 session_start();
 
-$conn = mysqli_connect("localhost","root","","collegeproject",3307);
+include('config.php');
 
 $email = $_SESSION['email'];
+
+if(empty($_FILES['photo']['name'])){
+    header("Location: studenthome.php");
+    exit();
+}
 
 // file
 $photo = $_FILES['photo']['name'];

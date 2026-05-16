@@ -1,6 +1,6 @@
 <?php
 session_start();
-$conn = mysqli_connect("localhost","root","","collegeproject",3307);
+include('config.php');
 
 if(!isset($_SESSION['email'])){
     header("location:login.php");

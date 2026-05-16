@@ -1,18 +1,9 @@
 <?php
 
-error_reporting(0);
 session_start();
 
-$host="localhost";
-$user="root";
-$password="";
-$db="collegeproject";
+include('config.php');
 
-$data=mysqli_connect($host,$user,$password,$db,3307);
-
-if($data===false){
-    die("connection error");
-}
 
 if($_SERVER["REQUEST_METHOD"]=="POST"){
 
@@ -20,7 +11,11 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $pass = $_POST['password'];
 
     $sql = "SELECT * FROM user WHERE email='$email' AND password='$pass'";
-    $result = mysqli_query($data,$sql);
+    $result = mysqli_query($conn,$sql);
+
+    if(!$result){
+        die(mysqli_error($conn));
+    }
 
     $row = mysqli_fetch_assoc($result);
 
