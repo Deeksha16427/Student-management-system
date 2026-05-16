@@ -1,5 +1,5 @@
 <?php
-include('config.php');
+require_once 'db.php';
 
 if(isset($_POST['add_teacher']))
 {

@@ -12,7 +12,7 @@ elseif(isset($_SESSION['usertype']) && $_SESSION['usertype']=='student')
     exit();
 }
 // DATABASE CONNECTION
-include('config.php');
+require_once 'db.php';
 ?>
 
 <!DOCTYPE html>

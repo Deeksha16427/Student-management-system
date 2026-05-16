@@ -1,6 +1,6 @@
 <?php
 
-include('config.php');
+require_once 'db.php';
 
 // form data lena
 $name = $_POST['name'];

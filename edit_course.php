@@ -1,6 +1,6 @@
 <?php
 
-include('config.php');
+require_once 'db.php';
 
 // GET ID FROM URL
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;

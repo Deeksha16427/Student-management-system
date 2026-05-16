@@ -1,6 +1,6 @@
 <?php
 
-include('config.php');
+require_once 'db.php';
 
 $id = (int) $_GET['id'];
 

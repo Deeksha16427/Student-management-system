@@ -12,7 +12,7 @@ elseif($_SESSION['usertype']=='student')
     exit();
 }
 // DATABASE CONNECTION
-include('config.php');
+require_once 'db.php';
 
 // TOTAL STUDENTS COUNT
 $sql = "SELECT COUNT(*) as total FROM admission";

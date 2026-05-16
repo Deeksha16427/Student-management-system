@@ -1,6 +1,6 @@
 <?php
 // DB connection
-include('config.php');
+require_once 'db.php';
 
 // Form data receive
 $username = $_POST['name'];
