@@ -1,11 +1,17 @@
 <?php
-$host = getenv('MYSQLHOST');
-$user = getenv('MYSQLUSER');
-$password = getenv('MYSQLPASSWORD');
-$db = getenv('MYSQLDATABASE');
-$port = getenv('MYSQLPORT');
+$url = getenv('MYSQL_URL');
 
-$conn = mysqli_connect($host, $user, $password, $db, $port);
+if($url){
+    $parts = parse_url($url);
+    $host = $parts['host'];
+    $user = $parts['user'];
+    $password = $parts['pass'];
+    $db = ltrim($parts['path'], '/');
+    $port = $parts['port'];
+    $conn = mysqli_connect($host, $user, $password, $db, $port);
+} else {
+    $conn = mysqli_connect('localhost', 'root', '', 'collegeproject', 3307);
+}
 
 if(!$conn){
     die("Connection failed: " . mysqli_connect_error());
