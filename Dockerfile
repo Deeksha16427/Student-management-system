@@ -1,18 +1,16 @@
 FROM php:8.1-apache
 
-RUN rm -f /etc/apache2/mods-enabled/mpm_event.conf \
-    /etc/apache2/mods-enabled/mpm_event.load \
-    /etc/apache2/mods-enabled/mpm_worker.conf \
-    /etc/apache2/mods-enabled/mpm_worker.load \
-    && ln -sf /etc/apache2/mods-available/mpm_prefork.conf \
-              /etc/apache2/mods-enabled/mpm_prefork.conf \
-    && ln -sf /etc/apache2/mods-available/mpm_prefork.load \
-              /etc/apache2/mods-enabled/mpm_prefork.load
+# Disable conflicting MPMs and enable prefork (required for PHP mod_php)
+RUN a2dismod mpm_event mpm_worker \
+    && a2enmod mpm_prefork
 
+# Install mysqli extension
 RUN docker-php-ext-install mysqli
 
+# Copy project files
 COPY . /var/www/html/
 
+# Fix permissions
 RUN chown -R www-data:www-data /var/www/html
 
 EXPOSE 80
