@@ -1,6 +1,12 @@
-FROM php:8.1-fpm
+FROM php:8.1-apache
 
-RUN apt-get update && apt-get install -y nginx && rm -rf /var/lib/apt/lists/*
+RUN sed -i 's/^#\(.*mod_rewrite\)/\1/' /etc/apache2/apache2.conf \
+    && a2enmod rewrite \
+    && sed -i '/^LoadModule mpm_event/d' /etc/apache2/mods-enabled/*.load 2>/dev/null || true \
+    && rm -f /etc/apache2/mods-enabled/mpm_event.load \
+    && rm -f /etc/apache2/mods-enabled/mpm_event.conf \
+    && echo "LoadModule mpm_prefork_module /usr/lib/apache2/modules/mod_mpm_prefork.so" \
+       > /etc/apache2/mods-enabled/mpm_prefork.load
 
 RUN docker-php-ext-install mysqli
 
@@ -8,23 +14,6 @@ COPY . /var/www/html/
 
 RUN chown -R www-data:www-data /var/www/html
 
-COPY <<EOF /etc/nginx/sites-available/default
-server {
-    listen 80;
-    root /var/www/html;
-    index index.php index.html;
-    location / {
-        try_files \$uri \$uri/ /index.php?\$query_string;
-    }
-    location ~ \.php$ {
-        fastcgi_pass 127.0.0.1:9000;
-        fastcgi_index index.php;
-        include fastcgi_params;
-        fastcgi_param SCRIPT_FILENAME \$document_root\$fastcgi_script_name;
-    }
-}
-EOF
-
 EXPOSE 80
 
-CMD service nginx start && php-fpm
+CMD ["apache2-foreground"]
