@@ -1,0 +1,14 @@
+Options -Indexes
+
+RewriteEngine On
+
+# Serve existing files and directories directly (CSS, JS, images, fonts, etc.)
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Skip rewriting for static file extensions explicitly
+RewriteRule \.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|otf|map|txt)$ - [L]
+
+# Route everything else to index.php
+RewriteRule ^(.*)$ index.php [QSA,L]
