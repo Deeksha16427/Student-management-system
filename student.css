@@ -23,9 +23,9 @@ body {
 .navbar .title {
     margin:0;
     margin-left: auto;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     font-size: 25px !important;
-    flex: 1;
+    /* flex: 1; */
 }
 /* SIDEBAR */
 .sidebar {
