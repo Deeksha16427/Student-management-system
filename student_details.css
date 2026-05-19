@@ -15,7 +15,7 @@
 .title {
     margin: 0;
     margin-left: auto;
-    font-size: 28px;
+    font-size: 25px !important;
 }
 
 /* SIDEBAR */
@@ -225,8 +225,10 @@
     }
 
     .title {
-        font-size: 18px;
-        margin-left: 15px;
+        font-size: 20px !important;
+        margin-left: auto;
+        text-align: right;
+        padding-right: 10px;
     }
 
     /* SIDEBAR */
@@ -310,8 +312,10 @@
     }
 
     .title {
-        font-size: 15px;
-        margin-left: 10px;
+        font-size: 18px !important;
+        margin-left: auto;
+        text-align: right;
+        padding-right: 10px;
     }
 
     .sidebar {
