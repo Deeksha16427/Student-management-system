@@ -77,7 +77,7 @@ $phone = $row['phone'] ?? "Not Available";
 
 </div>
     <!-- MENU -->
-    <a href="#" class="active-link">
+    <a href="studenthome.php" class="active-link">
         <i class="fa fa-home"></i>&nbsp; Dashboard
     </a>
 

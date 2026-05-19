@@ -22,7 +22,7 @@ body {
 }
 .navbar .title {
     margin:0;
-    margin-left: 15px;
+    margin-left: auto;
     white-space: nowrap;
     font-size: 24px !important;
     flex: 1;
@@ -231,8 +231,11 @@ body {
     }
 
     .navbar .title {
-        font-size: 15px !important;
-        margin-left: 10px;
+        font-size: 18px !important;
+        /* margin-left: 10px; */
+        margin-left: auto;
+        text-align: right;
+        padding-right: 10px;
     }
 
     /* SIDEBAR */
@@ -355,8 +358,11 @@ body {
     }
 
     .navbar .title {
-        font-size: 13px !important;
-        margin-left: 8px;
+        font-size: 16px !important;
+        /* margin-left: 8px; */
+        margin-left: auto;
+        text-align: right;
+        padding-right: 10px;
     }
 
     .sidebar {

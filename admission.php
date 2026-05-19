@@ -38,7 +38,7 @@
                 <input type="text" name="name" class="form-control mb-3" placeholder="Full Name" required>
             </div>
             <div class="col-md-6">
-                <input type="date" name="dob" class="form-control mb-3" required>
+                <input type="date" name="dob" class="form-control mb-3" placeholder="dd-mm-yy" required>
             </div>
             <div class="col-md-6">
                 <select class="form-control mb-3" name="gender">
