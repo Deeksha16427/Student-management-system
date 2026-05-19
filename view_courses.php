@@ -135,7 +135,7 @@ while($info=$result->fetch_assoc())
     </td>
 
     <td>
-        ₹<?php echo number_format($info['fees'],2); ?>
+        ₹<?php echo number_format($info['fees'],2); ?>/year
     </td>
 
     <td>

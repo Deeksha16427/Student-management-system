@@ -273,6 +273,9 @@ textarea{
         padding: 12px;
         font-size: 15px;
     }
+    .title {
+        font-size: 22px;
+    }
 }
 @media (max-width: 480px) {
 
@@ -306,5 +309,8 @@ textarea{
 
     .menu-btn {
         font-size: 26px;
+    }
+    .title {
+        font-size: 20px;
     }
 }

@@ -298,6 +298,18 @@ td:nth-last-child(2) {
         z-index: 2000;
         transition: 0.3s;
     }
+    .navbar {
+        height: 65px;
+        padding: 0 14px;
+        justify-content: space-between;
+    }
+    
+    .menu-btn {
+        font-size: 25px;
+    }
+    .title {
+        font-size: 22px;
+    }
 
     .sidebar.active {
         left: 0;
@@ -345,12 +357,15 @@ td:nth-last-child(2) {
     }
 
     .navbar {
-        height: 65px;
+        height: 60px;
         padding: 0 10px;
     }
 
     .menu-btn {
-        font-size: 26px;
+        font-size: 23px;
+    }
+    .title {
+        font-size: 22px;
     }
 
     th,
