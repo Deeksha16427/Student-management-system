@@ -286,97 +286,131 @@ td:nth-last-child(2) {
         font-size: 12px;
     }
 }
-@media (max-width: 768px) {
-
-    /* SIDEBAR OVERLAY */
-    .sidebar {
-        position: fixed;
-        left: -260px;
-        top: 0;
-        height: 100vh;
-        width: 260px;
-        z-index: 2000;
-        transition: 0.3s;
-    }
-    .navbar {
-        height: 65px;
-        padding: 0 14px;
-        justify-content: space-between;
-    }
+        /* MOBILE */
+        @media (max-width: 768px) {
     
-    .menu-btn {
-        font-size: 25px;
-    }
-    .title {
-        font-size: 22px;
-    }
-
-    .sidebar.active {
-        left: 0;
-    }
-
-    /* CONTENT SHIFT REMOVE (IMPORTANT) */
-    #content {
-        margin-left: 0 !important;
-    }
-
-    #content.active {
-        margin-left: 0 !important;
-    }
-
-    /* TABLE FULL SCROLL SAFE */
-    table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-        background: white;
-    }
-
-    th,
-    td {
-        font-size: 12px;
-        padding: 8px;
-    }
-
-    /* BUTTONS SMALL */
-    .edit-btn,
-    .delete-btn {
-        padding: 5px 6px;
-        font-size: 11px;
-    }
-
-    /* TITLE SMALL */
-    h1 {
-        font-size: 22px;
-    }
-}
-@media (max-width: 480px) {
-
-    h1 {
-        font-size: 18px;
-    }
-
-    .navbar {
-        height: 60px;
-        padding: 0 10px;
-    }
-
-    .menu-btn {
-        font-size: 23px;
-    }
-    .title {
-        font-size: 22px;
-    }
-
-    th,
-    td {
-        font-size: 11px;
-        padding: 6px;
-    }
-
-    .edit-btn,
-    .delete-btn {
-        padding: 4px 6px;
-        font-size: 10px;
-    }
-}
+            /* NAVBAR */
+    
+            .navbar {
+                height: 78px;
+                padding: 0 18px;
+                justify-content: space-between;
+            }
+    
+            .menu-btn {
+                font-size: 32px;
+            }
+    
+            .title {
+                font-size: 28px;
+                font-weight: 600;
+            }
+    
+            /* SIDEBAR */
+    
+            .sidebar {
+                position: fixed;
+                left: -260px;
+                top: 0;
+                height: 100vh;
+                width: 260px;
+                z-index: 2000;
+                transition: 0.3s;
+            }
+    
+            .sidebar.active {
+                left: 0;
+            }
+    
+            /* CONTENT */
+    
+            #content {
+                margin-left: 0 !important;
+                padding: 12px;
+            }
+    
+            #content.active {
+                margin-left: 0 !important;
+            }
+    
+            .container {
+                width: 100%;
+                margin: 20px auto;
+                overflow-x: auto;
+            }
+    
+            /* HEADING */
+    
+            h1 {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+    
+            /* TABLE */
+    
+            table {
+                min-width: 900px;
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+                border-collapse: collapse;
+            }
+    
+            th,
+            td {
+                font-size: 15px;
+                padding: 12px;
+            }
+    
+            /* BUTTONS */
+    
+            .edit-btn,
+            .delete-btn {
+                padding: 7px 10px;
+                font-size: 13px;
+            }
+        }
+    
+    
+        /* SMALL MOBILE */
+    
+        @media (max-width: 480px) {
+    
+            .navbar {
+                height: 85px;
+                padding: 0 16px;
+            }
+    
+            .menu-btn {
+                font-size: 34px;
+            }
+    
+            .title {
+                font-size: 26px;
+            }
+    
+            h1 {
+                font-size: 24px;
+            }
+    
+            .container {
+                width: 100%;
+                overflow-x: auto;
+            }
+    
+            table {
+                min-width: 850px;
+            }
+    
+            th,
+            td {
+                font-size: 14px;
+                padding: 10px;
+            }
+    
+            .edit-btn,
+            .delete-btn {
+                font-size: 12px;
+                padding: 6px 10px;
+            }
+        }
