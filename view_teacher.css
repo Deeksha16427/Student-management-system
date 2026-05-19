@@ -144,14 +144,21 @@ table th {
     padding: 14px;
     text-align: center;
 }
-
 table td {
     padding: 14px;
     text-align: center;
     border-bottom: 1px solid #ddd;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
 }
-
+table td:last-child {
+    white-space: nowrap;
+    overflow: visible;
+    max-width: unset;
+    min-width: 120px;
+}
 
 /* BUTTONS */
 
@@ -181,6 +188,7 @@ table td {
     opacity: 0.85;
     color: white;
 }
+
 
 
 /*  RESPONSIVE  */
