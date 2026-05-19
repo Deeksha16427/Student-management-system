@@ -273,6 +273,14 @@ textarea{
         padding: 12px;
         font-size: 15px;
     }
+    .navbar {
+        height: 100px;
+        padding: 0 16px;
+    }
+    
+    .menu-btn {
+        font-size: 32px;
+    }
     .title {
         font-size: 22px;
     }
@@ -303,7 +311,7 @@ textarea{
     }
 
     .navbar {
-        height: 80px;
+        height: 100px;
         padding: 0 16px;
     }
 
