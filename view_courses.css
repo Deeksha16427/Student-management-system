@@ -286,131 +286,153 @@ td:nth-last-child(2) {
         font-size: 12px;
     }
 }
-        /* MOBILE */
-        @media (max-width: 768px) {
+         /* MOBILE */
+         @media (max-width: 768px) {
     
-            /* NAVBAR */
+             html,
+             body {
+                 overflow-x: hidden;
+             }
     
-            .navbar {
-                height: 78px;
-                padding: 0 18px;
-                justify-content: space-between;
-            }
+             /* NAVBAR */
     
-            .menu-btn {
-                font-size: 32px;
-            }
+             .navbar {
+                 height: 65px;
+                 padding: 0 18px;
+                 justify-content: space-between;
+             }
     
-            .title {
-                font-size: 28px;
-                font-weight: 600;
-            }
+             .menu-btn {
+                 font-size: 25px;
+             }
     
-            /* SIDEBAR */
+             .title {
+                 font-size: 22px;
+                 /* font-weight: 700; */
+                 white-space: nowrap;
+             }
     
-            .sidebar {
-                position: fixed;
-                left: -260px;
-                top: 0;
-                height: 100vh;
-                width: 260px;
-                z-index: 2000;
-                transition: 0.3s;
-            }
+             /* SIDEBAR */
     
-            .sidebar.active {
-                left: 0;
-            }
+             .sidebar {
+                 width: 250px;
+                 left: -250px;
+                 overflow-y: auto;
+                 z-index: 9999;
+             }
     
-            /* CONTENT */
+             .sidebar.active {
+                 left: 0;
+             }
     
-            #content {
-                margin-left: 0 !important;
-                padding: 12px;
-            }
+             /* CONTENT */
     
-            #content.active {
-                margin-left: 0 !important;
-            }
+             #content {
+                 margin-left: 0 !important;
+                 padding: 18px 10px;
+                 width: 100%;
+             }
     
-            .container {
-                width: 100%;
-                margin: 20px auto;
-                overflow-x: auto;
-            }
+             #content.active {
+                 margin-left: 0 !important;
+             }
     
-            /* HEADING */
+             /* PAGE TITLE */
     
-            h1 {
-                font-size: 28px;
-                margin-bottom: 20px;
-            }
+             h1,
+             .page-title {
+                 font-size: 28px;
+                 margin-bottom: 22px;
+             }
     
-            /* TABLE */
+             /* TABLE CONTAINER */
     
-            table {
-                min-width: 900px;
-                display: block;
-                overflow-x: auto;
-                white-space: nowrap;
-                border-collapse: collapse;
-            }
+             .table-container,
+             .container {
+                 width: 100%;
+                 overflow-x: auto;
+                 padding-bottom: 10px;
+             }
     
-            th,
-            td {
-                font-size: 15px;
-                padding: 12px;
-            }
+             /* TABLE */
     
-            /* BUTTONS */
+             table {
+                 min-width: 950px;
+                 border-collapse: collapse;
+                 white-space: nowrap;
+             }
     
-            .edit-btn,
-            .delete-btn {
-                padding: 7px 10px;
-                font-size: 13px;
-            }
-        }
+             table th,
+             table td {
+                 font-size: 15px;
+                 padding: 12px 10px;
+             }
+    
+             /* BUTTONS */
+    
+             .edit-btn,
+             .delete-btn,
+             .action-btn {
+                 font-size: 13px;
+                 padding: 7px 10px;
+                 white-space: nowrap;
+             }
+    
+             .actions {
+                 display: flex;
+                 gap: 5px;
+                 flex-wrap: nowrap;
+                 justify-content: center;
+             }
+         }
     
     
-        /* SMALL MOBILE */
+         /* SMALL MOBILE */
     
-        @media (max-width: 480px) {
+         @media (max-width: 480px) {
     
-            .navbar {
-                height: 85px;
-                padding: 0 16px;
-            }
+             .navbar {
+                 height: 60px;
+                 padding: 0 16px;
+             }
     
-            .menu-btn {
-                font-size: 34px;
-            }
+             .menu-btn {
+                 font-size: 23px;
+             }
     
-            .title {
-                font-size: 26px;
-            }
+             .title {
+                 font-size: 20px;
+             }
     
-            h1 {
-                font-size: 24px;
-            }
+             h1,
+             .page-title {
+                 font-size: 24px;
+             }
     
-            .container {
-                width: 100%;
-                overflow-x: auto;
-            }
+             #content {
+                 padding: 16px 8px;
+             }
     
-            table {
-                min-width: 850px;
-            }
+             .table-container,
+             .container {
+                 width: 100%;
+                 overflow-x: auto;
+             }
     
-            th,
-            td {
-                font-size: 14px;
-                padding: 10px;
-            }
+             table {
+                 min-width: 900px;
+             }
     
-            .edit-btn,
-            .delete-btn {
-                font-size: 12px;
-                padding: 6px 10px;
-            }
-        }
+             table th,
+             table td {
+                 font-size: 14px;
+                 padding: 10px 8px;
+             }
+    
+             .edit-btn,
+             .delete-btn,
+             .action-btn {
+                 font-size: 12px;
+                 padding: 6px 10px;
+             }
+         }
