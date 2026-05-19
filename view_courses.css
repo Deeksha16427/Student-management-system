@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial;
-    /* background: #f4f8ff; */
+    background: #f4f8ff;
 }
 /* NAVBAR */
 .navbar {
@@ -141,13 +141,21 @@ h1 {
     margin-bottom: 30px;
 }
 
-table {
+/* table {
     width: 100%;
     border-collapse: collapse;
     background: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+} */
+table td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
 }
-
 th {
     background: #164b7d;
     color: white;
@@ -217,6 +225,12 @@ td:nth-child(7) {
 td:last-child,
 td:nth-last-child(2) {
     white-space: nowrap;
+}
+table td:last-child {
+    white-space: nowrap;
+    overflow: visible;
+    max-width: unset;
+    min-width: 120px;
 }
 .edit-btn {
     background: green;
