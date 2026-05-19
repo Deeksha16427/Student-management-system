@@ -221,17 +221,15 @@ body {
     /* NAVBAR */
 
     .navbar {
-        height: 65px;
-        padding: 0 15px;
         justify-content: space-between;
     }
 
     .menu-btn {
-        font-size: 26px;
+        font-size: 24px;
     }
 
     .title {
-        font-size: 18px;
+        font-size: 22px;
         margin-left: 10px;
         white-space: nowrap;
     }
@@ -242,7 +240,7 @@ body {
         width: 250px;
         left: -250px;
         z-index: 9999;
-        overflow-y: auto;
+        /* overflow-y: auto; */
     }
 
     .sidebar.active {
@@ -254,7 +252,7 @@ body {
     #content {
         margin-left: 0 !important;
         width: 100%;
-        padding: 15px 12px;
+        padding: 15px;
     }
 
     #content.active {
@@ -315,7 +313,7 @@ body {
     }
 
     .title {
-        font-size: 15px;
+        font-size: 20px;
     }
 
     .sidebar {
