@@ -303,14 +303,15 @@ textarea{
     }
 
     .navbar {
-        height: 65px;
-        padding: 0 12px;
+        height: 80px;
+        padding: 0 16px;
     }
 
     .menu-btn {
-        font-size: 26px;
+        font-size: 32px;
     }
     .title {
-        font-size: 20px;
+        font-size:  24px !important;
+        font-weight: 600;
     }
 }
