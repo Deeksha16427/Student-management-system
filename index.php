@@ -25,11 +25,11 @@
         <img class="main_img" src="public/images/frontimg.png">
     </div>
     <div class="container mt-5">
-       <div class="row">
-         <div class="col-md-5 mt-5">
+        <div class="row">
+        <div class="col-md-5 mt-5">
             <img src="public/images/school.png">
-         </div>
-         <div class="col-md-1"></div>
+        </div>
+        <div class="col-md-1"></div>
          <div class="about-text col-md-6 mt-2">
             <h1>About Student Portal</h1>
             <p>The Student Portal is a modern and user-friendly platform designed to simplify the process of student admission and management. It allows students to easily apply for admission by filling out online forms and submitting their details without any hassle. This system helps in reducing paperwork and ensures that all student information is stored in an organized and secure manner.
